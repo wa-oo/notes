@@ -67,5 +67,9 @@ mvn -Pnexus dependency:sources	下载依赖关系的源码
    }
    ```
 
-   
+   @ComponentScan("")		扫描包中的bean文件并生成对象 
+
+   component 				装配一个功能bean
+
+   asm 	cglib
 
