@@ -96,7 +96,7 @@ mvn -Pnexus dependency:sources	下载依赖关系的源码
 
 ```java
 1.	@Component				取代<bean class="">
-	@Component("id")		取代<bean id="" class="">
+	@Component("id")			取代<bean id="" class="">
 2.web开发,提供三个注解取代<bean class="">
 	@Repository				dao层
 	@Service				service层
@@ -105,13 +105,13 @@ mvn -Pnexus dependency:sources	下载依赖关系的源码
 	@Value("")				普通值
 	@Autowried				按照类型注入引用值
 	@Autowried
-	@Qualifier("名称")		按照名称注入引用值
-	@Resource("名称")			按照名称注入引用值
+	@Qualifier("名称")			按照名称注入引用值
+	@Resource("名称")				按照名称注入引用值
 4.生命周期
 	初始化:@PostConstruct
 	销毁:	@PreDestroy
 5.作用域
-	@Scope("prototype")		多例
+	@Scope("prototype")			多例
 ```
 
 ##### 组件扫描
