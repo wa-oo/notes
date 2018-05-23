@@ -23,5 +23,5 @@ Junit4通过注解的方式来识别测试方法
 
 如果缺少会报如下错误
 
-![1527083159780](C:\Users\WangTao\AppData\Local\Temp\1527083159780.png)
+![image](https://github.com/wangtao-Allen/notes/blob/master/photo/test-error.png)
 
