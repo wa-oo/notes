@@ -106,7 +106,7 @@ mvn -Pnexus dependency:sources	下载依赖关系的源码
 	@Autowried				按照类型注入引用值
 	@Autowried
 	@Qualifier("名称")			按照名称注入引用值
-	@Resource("名称")				按照名称注入引用值
+	@Resource("名称")			按照名称注入引用值
 4.生命周期
 	初始化:@PostConstruct
 	销毁:	@PreDestroy
