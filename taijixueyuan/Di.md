@@ -67,9 +67,56 @@ mvn -Pnexus dependency:sources	下载依赖关系的源码
    }
    ```
 
-   @ComponentScan("")		扫描包中的bean文件并生成对象 
 
-   component 				装配一个功能bean
+##### 作用域
 
-   asm 	cglib
+用于确定spring创建bean实例个数	scope
+
+1. singleton
+
+   在spring IOC容器中仅存在一个bean实例，bean以单例方式存在,默认值
+
+2. prototype
+
+   每次从容器中调用bean时,都返回一个新实例,即每次调用getBean()时,相当于执行new XXXBean(); 
+
+3. request
+
+   每次HTTP请求都会创建一个新的bean,该作用域仅适用于WebApplicationContext环境
+
+4. session
+
+   同一个HTTP Session共享一个Bean,不同session使用不同的bean,仅适用于WebApplicationContext环境
+
+5. globalSession
+
+   一般用于Portlet应用环境,该作用域仅适用于WebApplicationContext环境
+
+#### 注解装配Bean
+
+```java
+1.	@Component				取代<bean class="">
+	@Component("id")		取代<bean id="" class="">
+2.web开发,提供三个注解取代<bean class="">
+	@Repository				dao层
+	@Service				service层
+	@Controller				web层
+3.依赖注入
+	@Value("")				普通值
+	@Autowried				按照类型注入引用值
+	@Autowried
+	@Qualifier("名称")		按照名称注入引用值
+	@Resource("名称")			按照名称注入引用值
+4.生命周期
+	初始化:@PostConstruct
+	销毁:	@PreDestroy
+5.作用域
+	@Scope("prototype")		多例
+```
+
+##### 组件扫描
+
+```xml
+<context:component-scan base-package="包名"></context:component-scan>
+```
 
