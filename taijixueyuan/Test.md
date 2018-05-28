@@ -25,3 +25,13 @@ Junit4通过注解的方式来识别测试方法
 
 ![image](https://github.com/wangtao-Allen/notes/blob/master/photo/test-error.png)
 
+原因：
+1.有返回值的方法不能直接测试
+
+2.带参数的方法不能直接测试
+
+3.访问权限在public一下的方法不能直接测试
+
+4.static静态方法不能直接测试
+
+5.不能给出现前四个条件中任意一个的方法添加@Test注解，否则执行满足@Test条件的方法也会出现initializationerror初始化异常
